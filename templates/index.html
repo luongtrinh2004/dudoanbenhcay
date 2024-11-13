@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Disease Detection</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Plant Disease Detection</h1>
+      <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="model_type">Chọn loại mô hình:</label>
+        <select name="model_type" id="model_type">
+          <option value="fruits">Fruits</option>
+          <option value="leaves">Leaves</option>
+        </select>
+        <br /><br />
+
+        <label for="file">Tải ảnh lên hoặc chụp ảnh:</label>
+        <input type="file" name="file" accept="image/*" capture="camera" />
+        <br /><br />
+
+        <button type="submit">Dự đoán</button>
+      </form>
+
+      {% if result %}
+      <h2>{{ result }}</h2>
+      <img src="{{ image_path }}" alt="Uploaded Image" width="300px" />
+      {% endif %}
+    </div>
+  </body>
+</html>
