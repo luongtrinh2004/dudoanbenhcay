@@ -12,30 +12,32 @@
       <form action="/" method="POST" enctype="multipart/form-data">
         <label for="model_type">Chọn loại mô hình:</label>
         <div class="model-selection">
-          <label>
+          <label class="custom-radio">
             <input type="radio" name="model_type" value="fruits" checked />
-            <span class="button">Fruits</span>
+            <span>Fruits</span>
           </label>
-          <label>
+          <label class="custom-radio">
             <input type="radio" name="model_type" value="leaves" />
-            <span class="button">Leaves</span>
+            <span>Leaves</span>
           </label>
         </div>
 
         <label for="file">Tải ảnh lên hoặc chụp ảnh:</label>
         <div class="file-upload">
-          <label for="file" class="custom-file-upload"> Chọn tệp </label>
-          <input
-            type="file"
-            name="file"
-            id="file"
-            accept="image/*"
-            capture="camera"
-          />
+          <label for="file" class="custom-file-upload">Chọn tệp</label>
+          <input type="file" name="file" id="file" accept="image/*" />
+          <span id="file-name" class="file-name"
+            >Chưa có tệp nào được chọn</span
+          >
+          <progress
+            id="file-progress"
+            value="0"
+            max="100"
+            style="display: none"
+          ></progress>
         </div>
 
-        <h1>_______________________</h1>
-        <button type="submit">Dự đoán</button>
+        <button type="submit" class="submit-button">Dự đoán</button>
       </form>
 
       {% if result %}
@@ -43,5 +45,6 @@
       <img src="{{ image_path }}" alt="Uploaded Image" width="300px" />
       {% endif %}
     </div>
+    <script src="/static/script.js"></script>
   </body>
 </html>
