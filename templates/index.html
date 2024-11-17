@@ -11,16 +11,30 @@
       <h1>Plant Disease Detection</h1>
       <form action="/" method="POST" enctype="multipart/form-data">
         <label for="model_type">Chọn loại mô hình:</label>
-        <select name="model_type" id="model_type">
-          <option value="fruits">Fruits</option>
-          <option value="leaves">Leaves</option>
-        </select>
-        <br /><br />
+        <div class="model-selection">
+          <label>
+            <input type="radio" name="model_type" value="fruits" checked />
+            <span class="button">Fruits</span>
+          </label>
+          <label>
+            <input type="radio" name="model_type" value="leaves" />
+            <span class="button">Leaves</span>
+          </label>
+        </div>
 
         <label for="file">Tải ảnh lên hoặc chụp ảnh:</label>
-        <input type="file" name="file" accept="image/*" capture="camera" />
-        <br /><br />
+        <div class="file-upload">
+          <label for="file" class="custom-file-upload"> Chọn tệp </label>
+          <input
+            type="file"
+            name="file"
+            id="file"
+            accept="image/*"
+            capture="camera"
+          />
+        </div>
 
+        <h1>_______________________</h1>
         <button type="submit">Dự đoán</button>
       </form>
 

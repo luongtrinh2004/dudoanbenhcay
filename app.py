@@ -2,15 +2,15 @@ from flask import Flask, render_template, request, redirect, url_for
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
+
 import os
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
 # Đường dẫn đến mô hình đã lưu
-fruits_model_path = './models/Citrus_fruits_model.h5'
-leaves_model_path = './models/Citrus_leaves_model.h5'
-
+fruits_model_path = './models/model_fruits_updated.h5'
+leaves_model_path = './models/model_leaves_updated.h5'
 # Tải mô hình đã lưu
 model_fruits = load_model(fruits_model_path)
 model_leaves = load_model(leaves_model_path)

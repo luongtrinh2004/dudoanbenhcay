@@ -1,3 +1,4 @@
+
 /* Nền gradient cho trang với xanh lá cây nhạt */
 body {
     font-family: Arial, sans-serif;
@@ -73,3 +74,108 @@ h2:hover {
 }
 
 /* Còn lại các hiệu ứng giữ nguyên */
+
+
+
+
+/* Kiểu cho nhóm nút */
+.model-selection {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    margin: 20px 0;
+}
+
+/* Ẩn input radio nhưng vẫn giữ chức năng */
+.model-selection input[type="radio"] {
+    display: none;
+}
+
+/* Kiểu nút */
+.model-selection .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #66bb6a; /* Màu xanh lá */
+    color: #fff;
+    font-size: 0.7rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Hiệu ứng hover */
+.model-selection .button:hover {
+    background-color: #81c784; /* Màu sáng hơn khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ */
+}
+
+/* Kiểu nút khi được chọn */
+.model-selection input[type="radio"]:checked + .button {
+    background-color: #388e3c; /* Màu đậm hơn khi chọn */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng */
+    transform: scale(1.1); /* Phóng to nhẹ hơn */
+}
+
+
+
+/* Ẩn nút input file mặc định */
+.file-upload input[type="file"] {
+    display: none;
+}
+
+/* Tạo kiểu cho nút chọn file */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #388e3c; /* Màu nền nút */
+    color: #fff; /* Màu chữ */
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Hiệu ứng hover */
+.custom-file-upload:hover {
+    background-color: #66bb6a; /* Màu sáng hơn khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ */
+}
+
+/* Hiệu ứng khi nhấn */
+.custom-file-upload:active {
+    background-color: #2e7d32; /* Màu đậm hơn khi nhấn */
+    transform: scale(0.98); /* Giảm kích thước nhẹ */
+}
+
+
+
+/* Kiểu dáng cho nút submit */
+.submit-button {
+    background-color: #388e3c; /* Màu xanh lá */
+    color: #fff; /* Màu chữ */
+    padding: 16px 32px; /* Tăng kích thước bằng cách thêm padding */
+    font-size: 3px; /* Kích thước chữ lớn hơn */
+    border: none; /* Loại bỏ viền */
+    border-radius: 10px; /* Bo góc mềm mại */
+    cursor: pointer; /* Con trỏ dạng tay khi hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Đổ bóng để nút nổi bật */
+}
+
+/* Hiệu ứng hover */
+.submit-button:hover {
+    background-color: #66bb6a; /* Màu nền sáng hơn khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ */
+}
+
+/* Hiệu ứng khi nhấn */
+.submit-button:active {
+    transform: scale(1); /* Trở lại kích thước gốc khi nhấn */
+    background-color: #2e7d32; /* Màu nền đậm hơn */
+}
